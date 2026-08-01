@@ -68,7 +68,7 @@ sitemills-cli <command> [options]
   ```
 - **seed**: Seed a local folder from a SiteMills project template.
   ```bash
-  sitemills-cli seed <projectName> [outputDir] [--type <structureType>]
+  sitemills-cli seed <projectName> [outputDir]
   ```
 - **seed-db**: Seed database records for a project/branch from a JSON file.
   ```bash
@@ -198,7 +198,7 @@ sitemills-cli <command> [options]
 - `--dry-run`: Execute Lua script as a dry run
 - `--limit <limit>`: Max documents matched for `run-lua`
 - `--max-write-ops <N>`: Max writes allowed for `run-lua`
-- `--type <type>`: Project structure type (`DIRECT` or `CONTRACT_BASED` for seeding) or upload media type (for uploading)
+- `--type <type>`: Media upload type (for `upload-media` command)
 - `--owner-name <name>`: Owner's name to register during Stripe Connect onboarding
 - `--country <country>`: Business country code to register during Stripe Connect onboarding (default: `US`)
 - `--description <desc>`: Brief description metadata for environment variables
