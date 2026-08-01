@@ -170,6 +170,12 @@ sitemills-cli <command> [options]
   ```bash
   sitemills-cli upload-media <projectId> <filePath> [--type <uploadType>]
   ```
+  Valid upload types:
+  - `APP_MEDIA` (default): General project branding assets such as banners, gallery images, or logos.
+  - `AGENT_ATTACHMENT`: Supporting images, PDFs, or text documents attached to agent prompts.
+  - `CODEBASE_FILE`: Static asset files deployed directly into the project's web directory.
+  - `USER_CONTENT`: Runtime content uploaded from generated applications.
+
 - **set-branding**: Configure project branding assets (banner, gallery, video) using media IDs.
   ```bash
   sitemills-cli set-branding <projectId> --banner <bannerMediaId> [--gallery <mediaId1,mediaId2>] [--video <showcaseVideoMediaId>]
@@ -192,10 +198,12 @@ sitemills-cli <command> [options]
 - `--dry-run`: Execute Lua script as a dry run
 - `--limit <limit>`: Max documents matched for `run-lua`
 - `--max-write-ops <N>`: Max writes allowed for `run-lua`
-- `--type <type>`: Project structure type (`DIRECT` or `CONTRACT_BASED`)
+- `--type <type>`: Project structure type (`DIRECT` or `CONTRACT_BASED` for seeding) or upload media type (for uploading)
 - `--owner-name <name>`: Owner's name to register during Stripe Connect onboarding
 - `--country <country>`: Business country code to register during Stripe Connect onboarding (default: `US`)
 - `--description <desc>`: Brief description metadata for environment variables
 - `--banner <id>`: Media ID of the project banner image
 - `--gallery <ids>`: Comma-separated media IDs to add to the project gallery
 - `--video <id>`: Media ID of the project showcase video
+- `--indexable`: Enable search engine indexing for the project visibility settings
+- `--no-indexable`: Disable search engine indexing for the project visibility settings
