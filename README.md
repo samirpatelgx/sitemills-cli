@@ -4,21 +4,22 @@ SiteMills CLI Tool for project code management on the SiteMills platform.
 
 ## Installation
 
-### Pre-compiled Binaries (No Node.js Required)
+### From Source
 
-You can use the pre-compiled binary executable for your platform directly from the `binaries/` directory:
+Clone the repository and install dependencies (none required, uses Node.js standard library):
 
-1. **Linux**: Download `binaries/sitemills-linux`, make it executable, and add it to your path:
-   ```bash
-   chmod +x binaries/sitemills-linux
-   sudo mv binaries/sitemills-linux /usr/local/bin/sitemills-cli
-   ```
-2. **macOS**: Download `binaries/sitemills-macos`, make it executable, and add it to your path:
-   ```bash
-   chmod +x binaries/sitemills-macos
-   sudo mv binaries/sitemills-macos /usr/local/bin/sitemills-cli
-   ```
-3. **Windows**: Download `binaries/sitemills-win.exe` and add it to your System PATH as `sitemills-cli.exe`.
+```bash
+git clone <repository-url> sitemills-cli
+cd sitemills-cli
+```
+
+To install the command globally during development:
+
+```bash
+npm link
+```
+
+This will register the `sitemills-cli` command globally on your system.
 
 ## Usage
 
